@@ -752,7 +752,6 @@ int32_t lps22hb_pressure_raw_get(const stmdev_ctx_t *ctx, uint32_t *buff)
   *buff = reg[2];
   *buff = (*buff * 256) + reg[1];
   *buff = (*buff * 256) + reg[0];
-  *buff *= 256;
 
   return ret;
 }
